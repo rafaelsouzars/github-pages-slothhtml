@@ -11,6 +11,8 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+
+	--size-icons: 24px;
 }
 
 body {
@@ -27,6 +29,7 @@ header {
 	display: flex;
 	justify-content: flex-end;
 	background-color: #673ab8;
+	/*background-color: green;*/
 }
 
 header nav {

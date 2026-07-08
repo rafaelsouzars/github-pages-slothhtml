@@ -1,4 +1,5 @@
 import { useLocation } from 'preact-iso';
+import { FaGithub } from 'react-icons/fa';
 
 export function Header() {
 	const { url } = useLocation();
@@ -8,11 +9,14 @@ export function Header() {
 			<nav>
 				<a href="/" class={url == '/' && 'active'}>
 					Home
-				</a>
-				<a href="/404" class={url == '/404' && 'active'}>
-					404
-				</a>
-			</nav>
+				</a>												
+				<a href="/contact" class={url == '/contact' && 'active'}>
+					Contact
+				</a>				
+			</nav>			
+			<a href="https://github.com/slothhtml" target="_blank" rel="noopener noreferrer" class={url == 'https://github.com/slothhtml' && 'active'}>
+				<FaGithub size="1.2rem"/>	
+			</a>						
 		</header>
 	);
 }
