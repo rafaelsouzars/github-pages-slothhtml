@@ -9,6 +9,7 @@
 	"dependencies": {
 		"preact": "^10.26.9",
 		"preact-iso": "^2.12.0",
+		"prismjs": "^1.30.0",
 		"react-icons": "^5.7.0"
 	},
 	"devDependencies": {
