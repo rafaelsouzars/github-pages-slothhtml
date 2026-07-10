@@ -1,39 +1,40 @@
-import preactLogo from '../../assets/preact.svg';
+import slothhtmlLogo from '../../assets/slothhtml.png';
+import { Code } from '../../components/Code';
+import { Card } from '../../components/Card';
 import './style.css';
 
-export function Home() {
+export function Home() {	
+
 	return (
 		<div class="home">
-			<a href="https://preactjs.com" target="_blank">
-				<img src={preactLogo} alt="Preact logo" height="160" width="160" />
+			<a href="https://github.com/rafaelsouzars/slothhtml" target="_blank">
+				<img src={slothhtmlLogo} alt="Slothhtml logo" height="160" width="160" />
 			</a>
-			<h1>Get Started create dotNet CLI apps</h1>
+			<h1>Slothhtml</h1>
+			<p>Inicie pequenos projetos HTML com apenas uma linha de comando.</p>
+			<Code 
+				code="slothhtml create -w" 
+				language="powershell"
+			/>
+			<Card>
+				<p>Commandos:</p>
+				<pre>
+					<code>
+						create - Inicia um projeto HTML.<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;-h --help - Ajuda do comando create.<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;-w --webpage - Create webpage. Ex: slothhtml create [-w or --webpage] [project_name or null]<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;-e --extension - Create browser extension. Ex: slothhtml create [-e or --extension] [project_name or null]<br/>
+						search - Pesquisar bibliotecas JS no repositório cdnjs.<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;-h --help - Ajuda do comando Search<br/>  
+						lib - Requisita uma biblioteca JS do repositório do cdnjs.<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;-h --help - Ajuda do comando Lib<br/>
+						info - Informações sobre códigos.<br/> 
+					</code>
+				</pre>
+			</Card>
 			<section>
-				<Resource
-					title="Learn Preact"
-					description="If you're new to Preact, try the interactive tutorial to learn important concepts"
-					href="https://preactjs.com/tutorial"
-				/>
-				<Resource
-					title="Differences to React"
-					description="If you're coming from React, you may want to check out our docs to see where Preact differs"
-					href="https://preactjs.com/guide/v10/differences-to-react"
-				/>
-				<Resource
-					title="Learn Vite"
-					description="To learn more about Vite and how you can customize it to fit your needs, take a look at their excellent documentation"
-					href="https://vitejs.dev"
-				/>
+							
 			</section>
 		</div>
-	);
-}
-
-function Resource(props) {
-	return (
-		<a href={props.href} target="_blank" class="resource">
-			<h2>{props.title}</h2>
-			<p>{props.description}</p>
-		</a>
 	);
 }
