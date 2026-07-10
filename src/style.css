@@ -59,6 +59,13 @@ main {
 	text-align: center;
 }
 
+footer {	
+	display: flex;
+	justify-content: center;
+	background-color: #673ab8;
+	/*background-color: green;*/
+}
+
 @media (max-width: 639px) {
 	main {
 		margin: 2rem;
