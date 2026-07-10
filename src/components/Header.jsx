@@ -14,7 +14,7 @@ export function Header() {
 					Contact
 				</a>				
 			</nav>			
-			<a href="https://github.com/slothhtml" target="_blank" rel="noopener noreferrer" class={url == 'https://github.com/slothhtml' && 'active'}>
+			<a href="https://github.com/rafaelsouzars/slothhtml" target="_blank" rel="noopener noreferrer" class={url == 'https://github.com/slothhtml' && 'active'}>
 				<FaGithub size="1.2rem"/>	
 			</a>						
 		</header>
