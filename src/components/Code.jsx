@@ -7,7 +7,7 @@ import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-csharp';
 
 
-export function Code({props}) {
+export function Code(props) {
 
     const code = `${props.code.trim()}`;
 
