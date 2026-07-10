@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Prism from 'prismjs';
-import 'prismjs/theme/prism-okaidia.css';
+import 'prismjs/themes/prism-okaidia.css';
 // Languages
 import 'prismjs/components/prism-powershell';
 import 'prismjs/components/prism-javascript'
