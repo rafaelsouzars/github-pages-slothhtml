@@ -7,9 +7,10 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@preact-icons/fa": "npm:@jsr/preact-icons__fa@^1.0.13",
 		"preact": "^10.26.9",
-		"preact-iso": "^2.12.0"
+		"preact-iso": "^2.12.0",
+		"prismjs": "^1.30.0",
+		"react-icons": "^5.7.0"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.10.2",

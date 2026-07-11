@@ -8,19 +8,22 @@ importers:
 
   .:
     dependencies:
-      '@preact-icons/fa':
-        specifier: npm:@jsr/preact-icons__fa@^1.0.13
-        version: '@jsr/preact-icons__fa@1.0.13'
       preact:
         specifier: ^10.26.9
-        version: 10.29.4
+        version: 10.29.5
       preact-iso:
         specifier: ^2.12.0
-        version: 2.12.0(preact-render-to-string@6.7.0(preact@10.29.4))(preact@10.29.4)
+        version: 2.12.0(preact-render-to-string@6.7.0(preact@10.29.5))(preact@10.29.5)
+      prismjs:
+        specifier: ^1.30.0
+        version: 1.30.0
+      react-icons:
+        specifier: ^5.7.0
+        version: 5.7.0(react@19.2.7)
     devDependencies:
       '@preact/preset-vite':
         specifier: ^2.10.2
-        version: 2.10.5(@babel/core@7.29.7)(preact@10.29.4)(rollup@4.62.2)(vite@7.3.6)
+        version: 2.10.5(@babel/core@7.29.7)(preact@10.29.5)(rollup@4.62.2)(vite@7.3.6)
       eslint:
         specifier: ^10.6.0
         version: 10.6.0
@@ -29,7 +32,7 @@ importers:
         version: 2.0.0(eslint@10.6.0)
       preact-material-components:
         specifier: ^1.6.1
-        version: 1.6.1(preact@10.29.4)
+        version: 1.6.1(preact@10.29.5)
       vite:
         specifier: ^7.0.4
         version: 7.3.6
@@ -370,12 +373,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@jsr/preact-icons__common@1.1.0':
-    resolution: {integrity: sha512-mVjtQUxBw+NjQ29oTq33LgAO8gjgiGtvkWAExwdW7iHLtxZiIXwCEEfFR3IRvZhpg2htEwTJZ6V5h+GMli36Yg==, tarball: https://npm.jsr.io/~/11/@jsr/preact-icons__common/1.1.0.tgz}
-
-  '@jsr/preact-icons__fa@1.0.13':
-    resolution: {integrity: sha512-RxDqel5V25PRPQF1Emuz64qIdY/hyUBsjKyiWpR0CL5p65nQ424yQrNEFodrRAaknj3lUFrTpd1NV85VboSF3A==, tarball: https://npm.jsr.io/~/11/@jsr/preact-icons__fa/1.0.13.tgz}
 
   '@material/animation@0.39.0':
     resolution: {integrity: sha512-f3BGCba0GdYY+eGFnK0L08HLyljgEyBvMLoJoutP225IpvzsLLTqumL/796nFCsouWn6E3G+8BUVjAtzTjU2lA==}
@@ -797,8 +794,8 @@ packages:
     resolution: {integrity: sha512-+ys997U96po4Kx/ABpBCqhA9EuxJaQWDQg7295H4hBphv3IZg0boBKuwYpt4YXp6MZ5AmZQnU/tyMTlRpaSejg==}
     engines: {node: '>= 0.4'}
 
-  caniuse-lite@1.0.30001802:
-    resolution: {integrity: sha512-vmv8ub2xwTNmljSKf82mtCk5JH7hC+YgzLj3P5zotvA0tPQ9016tdNNOG8WRca1IxOnhSsivB+J0z5FeE5LOUw==}
+  caniuse-lite@1.0.30001803:
+    resolution: {integrity: sha512-g/uHREV2ZpK9qMalCsWaxmA6ol+DX8GYhuf3T40RKoP+oL7vhRJh8LNt73PCjpnR6l14FzfPrB5Yux4PKm2meg==}
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -870,8 +867,8 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
-  electron-to-chromium@1.5.387:
-    resolution: {integrity: sha512-TaxwufTFDufvPEoXdhwVrA3UdFWBeWGkYoJ1K8ldF1xe6gKfth6iRNS5lTQ5JPNOHdGQm8PT1QYKUqFLCiUefQ==}
+  electron-to-chromium@1.5.388:
+    resolution: {integrity: sha512-Pl/aJaqOOxYxda3vcx1IKSJimwYXHDkEnGn0F+kG2EE68dDtx2uCinaS+Vih8Z91B9t8CSAbiF/HKyWcnXjhzw==}
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -1435,15 +1432,16 @@ packages:
     peerDependencies:
       preact: '>=10 || >= 11.0.0-0'
 
-  preact@10.22.1:
-    resolution: {integrity: sha512-jRYbDDgMpIb5LHq3hkI0bbl+l/TQ9UnkdQ0ww+lp+4MMOdqaUYdFc5qeyP+IV8FAd/2Em7drVPeKdQxsiWCf/A==}
-
-  preact@10.29.4:
-    resolution: {integrity: sha512-GMpwh9+NJ8tSmqwIaVyFRQkiKfBEzQ+k7r7tle4W+kaJ+7wJiB9hFz9BixAomMtenPPSBfM4bZhXozGxhf0uFQ==}
+  preact@10.29.5:
+    resolution: {integrity: sha512-zIai7HLEIz9c4GNfqpiuu5K9I1szXNtx0Ykr8f1Vbm1NasSVIvXGRxc8R8alLC+G+zonAt0TiUUBMn4+CiTgaA==}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prismjs@1.30.0:
+    resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
+    engines: {node: '>=6'}
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -1452,8 +1450,17 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
+  react-icons@5.7.0:
+    resolution: {integrity: sha512-LBLy340Rzqy6+/yVhZKT3B/QpP1BZaesGqasf09HPOBzRarcDIFH0WwXlXQfE7q7ipxK4MSiC5DIBWURCny6fw==}
+    peerDependencies:
+      react: '*'
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react@19.2.7:
+    resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
+    engines: {node: '>=0.10.0'}
 
   reflect.getprototypeof@1.0.10:
     resolution: {integrity: sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==}
@@ -1990,15 +1997,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@jsr/preact-icons__common@1.1.0':
-    dependencies:
-      preact: 10.29.4
-
-  '@jsr/preact-icons__fa@1.0.13':
-    dependencies:
-      '@jsr/preact-icons__common': 1.1.0
-      preact: 10.22.1
-
   '@material/animation@0.39.0': {}
 
   '@material/auto-init@0.39.0': {}
@@ -2296,12 +2294,12 @@ snapshots:
     dependencies:
       eslint-scope: 5.1.1
 
-  '@preact/preset-vite@2.10.5(@babel/core@7.29.7)(preact@10.29.4)(rollup@4.62.2)(vite@7.3.6)':
+  '@preact/preset-vite@2.10.5(@babel/core@7.29.7)(preact@10.29.5)(rollup@4.62.2)(vite@7.3.6)':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/plugin-transform-react-jsx': 7.29.7(@babel/core@7.29.7)
       '@babel/plugin-transform-react-jsx-development': 7.29.7(@babel/core@7.29.7)
-      '@prefresh/vite': 2.4.12(preact@10.29.4)(vite@7.3.6)
+      '@prefresh/vite': 2.4.12(preact@10.29.5)(vite@7.3.6)
       '@rollup/pluginutils': 5.4.0(rollup@4.62.2)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.29.7)
       debug: 4.4.3
@@ -2317,20 +2315,20 @@ snapshots:
 
   '@prefresh/babel-plugin@0.5.3': {}
 
-  '@prefresh/core@1.5.10(preact@10.29.4)':
+  '@prefresh/core@1.5.10(preact@10.29.5)':
     dependencies:
-      preact: 10.29.4
+      preact: 10.29.5
 
   '@prefresh/utils@1.2.1': {}
 
-  '@prefresh/vite@2.4.12(preact@10.29.4)(vite@7.3.6)':
+  '@prefresh/vite@2.4.12(preact@10.29.5)(vite@7.3.6)':
     dependencies:
       '@babel/core': 7.29.7
       '@prefresh/babel-plugin': 0.5.3
-      '@prefresh/core': 1.5.10(preact@10.29.4)
+      '@prefresh/core': 1.5.10(preact@10.29.5)
       '@prefresh/utils': 1.2.1
       '@rollup/pluginutils': 4.2.1
-      preact: 10.29.4
+      preact: 10.29.5
       vite: 7.3.6
     transitivePeerDependencies:
       - supports-color
@@ -2535,8 +2533,8 @@ snapshots:
   browserslist@4.28.5:
     dependencies:
       baseline-browser-mapping: 2.10.42
-      caniuse-lite: 1.0.30001802
-      electron-to-chromium: 1.5.387
+      caniuse-lite: 1.0.30001803
+      electron-to-chromium: 1.5.388
       node-releases: 2.0.50
       update-browserslist-db: 1.2.3(browserslist@4.28.5)
 
@@ -2557,7 +2555,7 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       get-intrinsic: 1.3.0
 
-  caniuse-lite@1.0.30001802: {}
+  caniuse-lite@1.0.30001803: {}
 
   concat-map@0.0.1: {}
 
@@ -2643,7 +2641,7 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  electron-to-chromium@1.5.387: {}
+  electron-to-chromium@1.5.388: {}
 
   entities@4.5.0: {}
 
@@ -3380,12 +3378,12 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact-iso@2.12.0(preact-render-to-string@6.7.0(preact@10.29.4))(preact@10.29.4):
+  preact-iso@2.12.0(preact-render-to-string@6.7.0(preact@10.29.5))(preact@10.29.5):
     dependencies:
-      preact: 10.29.4
-      preact-render-to-string: 6.7.0(preact@10.29.4)
+      preact: 10.29.5
+      preact-render-to-string: 6.7.0(preact@10.29.5)
 
-  preact-material-components@1.6.1(preact@10.29.4):
+  preact-material-components@1.6.1(preact@10.29.5):
     dependencies:
       '@babel/runtime': 7.29.7
       '@material/animation': 0.39.0
@@ -3425,17 +3423,17 @@ snapshots:
       '@material/typography': 0.39.0
       bind-decorator: 1.0.11
       material-components-web: 0.39.3
-      preact: 10.29.4
+      preact: 10.29.5
 
-  preact-render-to-string@6.7.0(preact@10.29.4):
+  preact-render-to-string@6.7.0(preact@10.29.5):
     dependencies:
-      preact: 10.29.4
+      preact: 10.29.5
 
-  preact@10.22.1: {}
-
-  preact@10.29.4: {}
+  preact@10.29.5: {}
 
   prelude-ls@1.2.1: {}
+
+  prismjs@1.30.0: {}
 
   prop-types@15.8.1:
     dependencies:
@@ -3445,7 +3443,13 @@ snapshots:
 
   punycode@2.3.1: {}
 
+  react-icons@5.7.0(react@19.2.7):
+    dependencies:
+      react: 19.2.7
+
   react-is@16.13.1: {}
+
+  react@19.2.7: {}
 
   reflect.getprototypeof@1.0.10:
     dependencies:
