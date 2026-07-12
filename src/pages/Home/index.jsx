@@ -8,7 +8,7 @@ export function Home() {
 	return (
 		<div class="home">
 			<a href="https://github.com/rafaelsouzars/slothhtml" target="_blank">
-				<img src={slothhtmlLogo} alt="Slothhtml logo" height="160" width="160" />
+				<img src={`.${slothhtmlLogo}`} alt="Slothhtml logo" height="160" width="160" />
 			</a>
 			<h1>Slothhtml</h1>
 			<p>Inicie pequenos projetos HTML com apenas uma linha de comando.</p>
