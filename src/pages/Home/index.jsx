@@ -4,11 +4,16 @@ import { Card } from '../../components/Card';
 import './style.css';
 
 export function Home() {	
+	// Pega o caminho base do vite.config.js (ex: '/slothhtml/')
+	const BASE = import.meta.env.BASE_URL; 
+	
+	// Garante que a barra final seja tratada corretamente para as validações de classe active
+	const cleanBase = BASE.endsWith('/') ? BASE.slice(0, -1) : BASE;
 
 	return (
 		<div class="home">
 			<a href="https://github.com/rafaelsouzars/slothhtml" target="_blank">
-				<img src={`.${slothhtmlLogo}`} alt="Slothhtml logo" height="160" width="160" />
+				<img src={slothhtmlLogo} alt="Slothhtml logo" height="160" width="160" />
 			</a>
 			<h1>Slothhtml</h1>
 			<p>Inicie pequenos projetos HTML com apenas uma linha de comando.</p>

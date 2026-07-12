@@ -1,16 +1,24 @@
 import { useLocation } from 'preact-iso';
 import { FaGithub, FaDiscord } from 'react-icons/fa';
 
+
+
 export function Header() {
 	const { url } = useLocation();
+
+	// Pega o caminho base do vite.config.js (ex: '/slothhtml/')
+	const BASE = import.meta.env.BASE_URL; 
+
+	// Garante que a barra final seja tratada corretamente para as validações de classe active
+	const cleanBase = BASE.endsWith('/') ? BASE.slice(0, -1) : BASE;
 
 	return (
 		<header>
 			<nav>
-				<a href="/slothhtml" class={url == '/slothhtml' && 'active'}>
+				<a href={`${cleanBase}/`} class={url == `${cleanBase}/` && 'active'}>
 					Home
 				</a>												
-				<a href="/slothhtml/contact" class={url == '/slothhtml/contact' && 'active'}>
+				<a href={`${cleanBase}/contact`} class={url == `${cleanBase}/contact` && 'active'}>
 					Contact
 				</a>				
 			</nav>
