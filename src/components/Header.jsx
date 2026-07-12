@@ -7,10 +7,10 @@ export function Header() {
 	return (
 		<header>
 			<nav>
-				<a href="/slothhtml" class={url == '/slothhtml' && 'active'}>
+				<a href="/" class={url == '/' && 'active'}>
 					Home
 				</a>												
-				<a href="/slothhtml/contact" class={url == '/slothhtml/contact' && 'active'}>
+				<a href="/contact" class={url == '/contact' && 'active'}>
 					Contact
 				</a>				
 			</nav>
